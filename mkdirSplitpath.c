@@ -10,7 +10,6 @@ void mkdir(char pathName[]){
         printf("MKDIR ERROR: no path provided\n");
         return;
     }
-
     char baseName[128];
     char dirName[128];
 
@@ -24,7 +23,7 @@ void mkdir(char pathName[]){
     struct NODE* last = NULL;
     while(child != NULL){
         if(strcmp(child->name, baseName) == 0){
-            printf("MKDIR ERROR: directory %s already exists\n", baseName);
+            printf("MKDIR ERROR: directory %s already exists\n", pathName);
             return;
         }
         last = child;
